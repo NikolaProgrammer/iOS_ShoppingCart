@@ -21,6 +21,7 @@ class QueryService {
     //MARK: Properties
     private let session = URLSession(configuration: .default)
 
+    private var orders: [Order] = []
     private var goods: [Commodity] = []
     var user: User!
     
@@ -28,6 +29,22 @@ class QueryService {
     private init() {}
     
     //MARK: GET-Requests
+    func queryOrders(completion: @escaping ([Order]?) -> ()) {
+        guard let url = URL(string: ServiceQueries.userOrders) else { return }
+        
+        let dataTask = session.dataTask(with: url){ (data, responce, error) in
+            if let error = error {
+                print("error: \(error)" + "\n" + "description: \(error.localizedDescription)")
+            } else if let data = data, let responce = responce as? HTTPURLResponse, responce.statusCode == 200 {
+                self.updateOrders(data: data)
+                DispatchQueue.main.async {
+                    completion(self.orders)
+                }
+            }
+        }
+        dataTask.resume()
+    }
+    
     func queryUser(completion: @escaping (User?) -> ()) {
         guard let url = URL(string: ServiceQueries.getUser) else { return }
         
@@ -77,6 +94,20 @@ class QueryService {
         }
     }
     
+    //MARK: POST-Request
+    func addOrder(order: Order) {
+        do {
+            let JSONData = try JSONEncoder().encode(order)
+            guard let url = URL(string: ServiceQueries.orders) else { return }
+            
+            let request = createRequest(type: .post, body: JSONData, url: url)
+            session.dataTask(with: request).resume()
+        } catch {
+            print("Cannot encode user in JSON: \(error)" + "\n" + "description: \(error.localizedDescription)")
+            return
+        }
+    }
+    
     //MARK: Private Methods
     private func createRequest(type: RequestType, body: Data, url: URL) -> URLRequest {
         var request = URLRequest(url: url)
@@ -95,6 +126,15 @@ class QueryService {
             user = try JSONDecoder().decode([User].self, from: data).first
         } catch {
             fatalError("No such user")
+        }
+    }
+    
+    private func updateOrders(data: Data) {
+        do {
+            orders = try JSONDecoder().decode([Order].self, from: data)
+        } catch {
+            print("decoding error: \(error)" + "\n" + "description: \(error.localizedDescription)")
+            orders = []
         }
     }
     

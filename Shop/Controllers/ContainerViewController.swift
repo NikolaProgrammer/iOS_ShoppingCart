@@ -57,10 +57,14 @@ class ContainerViewController: UIViewController {
             navigationController.setViewControllers([controller], animated: true)
             controller.query = ServiceQueries.allGoods
         }
-        if menuType == .bucket {
+        if menuType == .purchases {
             let controller = storyboard?.instantiateViewController(withIdentifier: StoryboardIndentifiers.carts) as! ShowPurchasesViewController
             navigationController.setViewControllers([controller], animated: true)
             controller.purchases = QueryService.shared.user.purchases
+        }
+        if menuType == .orders {
+            let controller = storyboard?.instantiateViewController(withIdentifier: StoryboardIndentifiers.orders) as! ShowOrdersViewController
+            navigationController.setViewControllers([controller], animated: true)
         }
     }
     

@@ -10,8 +10,8 @@ import Foundation
 
 enum MenuCellType: String {
     case main
+    case orders
     case purchases
-    case bucket
     case settings
     case exit
     
@@ -21,9 +21,9 @@ enum MenuCellType: String {
         switch self {
         case .main:
             name = "Главная"
-        case .purchases:
+        case .orders:
             name = "Заказы"
-        case .bucket:
+        case .purchases:
             name = "Корзина"
         case .settings:
             name = "Настройки"
@@ -34,6 +34,6 @@ enum MenuCellType: String {
         return name
     }
     
-    static let allValues: [MenuCellType] = [.main, .purchases, .bucket, .settings, .exit]
+    static let allValues: [MenuCellType] = [.main, .orders, .purchases, .settings, .exit]
     
 }

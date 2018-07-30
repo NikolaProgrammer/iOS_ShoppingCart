@@ -22,7 +22,13 @@ class ShowPurchasesViewController: BaseViewController {
     var purchases: [Purchase] = []
     
     @IBAction func checkoutButtonTapped(_ sender: UIButton) {
-     
+        var id = 0
+        queryService.queryOrders { (orders) in
+            id = orders!.count + 1
+        }
+        
+        let order = Order(id: id, userId: queryService.user.id, purchases: purchases, date: Date(), status: Order.OrderStatus.open)
+        queryService.addOrder(order: order)
     }
     
 }
