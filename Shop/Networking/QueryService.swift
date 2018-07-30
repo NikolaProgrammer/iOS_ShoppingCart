@@ -11,6 +11,7 @@ import Foundation
 fileprivate enum RequestType: String {
     case put
     case post
+    case delete
 }
 
 class QueryService {
@@ -108,11 +109,27 @@ class QueryService {
         }
     }
     
+    //MARK: DELETE-Request
+    func deleteOrder(order: Order) {
+        do {
+            let JSONData = try JSONEncoder().encode(order)
+            guard let url = URL(string: ServiceQueries.orders + "/\(order.id)") else { return }
+            
+            let request = createRequest(type: .delete, body: JSONData, url: url)
+            session.dataTask(with: request).resume()
+        } catch {
+            print("Cannot encode user in JSON: \(error)" + "\n" + "description: \(error.localizedDescription)")
+            return
+        }
+    }
+    
     //MARK: Private Methods
     private func createRequest(type: RequestType, body: Data, url: URL) -> URLRequest {
         var request = URLRequest(url: url)
-        request.httpBody = body
         request.httpMethod = type.rawValue.uppercased()
+        if type != .delete {
+            request.httpBody = body
+        }
         
         var headers = request.allHTTPHeaderFields ?? [:]
         headers["Content-Type"] = "application/json"
