@@ -19,6 +19,12 @@
 		91203F83210EF531000972DB /* CommodityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91203F82210EF531000972DB /* CommodityTableViewCell.swift */; };
 		91203F85210EF5ED000972DB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91203F84210EF5ED000972DB /* Constants.swift */; };
 		91203F87210EF6F9000972DB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91203F86210EF6F9000972DB /* Info.plist */; };
+		91203F8B210EF89E000972DB /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91203F88210EF89E000972DB /* SideMenuViewController.swift */; };
+		91203F8C210EF89E000972DB /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91203F89210EF89E000972DB /* ContainerViewController.swift */; };
+		91203F8D210EF89E000972DB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91203F8A210EF89E000972DB /* BaseViewController.swift */; };
+		91203F90210EF8FC000972DB /* MenuCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91203F8E210EF8FC000972DB /* MenuCellType.swift */; };
+		91203F91210EF8FC000972DB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91203F8F210EF8FC000972DB /* User.swift */; };
+		91203F93210EF905000972DB /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91203F92210EF905000972DB /* MenuTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +41,12 @@
 		91203F82210EF531000972DB /* CommodityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommodityTableViewCell.swift; sourceTree = "<group>"; };
 		91203F84210EF5ED000972DB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		91203F86210EF6F9000972DB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91203F88210EF89E000972DB /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		91203F89210EF89E000972DB /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		91203F8A210EF89E000972DB /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		91203F8E210EF8FC000972DB /* MenuCellType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCellType.swift; sourceTree = "<group>"; };
+		91203F8F210EF8FC000972DB /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		91203F92210EF905000972DB /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +98,8 @@
 		91203F77210EF49D000972DB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				91203F8E210EF8FC000972DB /* MenuCellType.swift */,
+				91203F8F210EF8FC000972DB /* User.swift */,
 				91203F73210EF489000972DB /* Commodity.swift */,
 			);
 			path = Model;
@@ -95,6 +109,9 @@
 			isa = PBXGroup;
 			children = (
 				91203F80210EF529000972DB /* ShowGoodsViewController.swift */,
+				91203F8A210EF89E000972DB /* BaseViewController.swift */,
+				91203F89210EF89E000972DB /* ContainerViewController.swift */,
+				91203F88210EF89E000972DB /* SideMenuViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -110,6 +127,7 @@
 		91203F7C210EF507000972DB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				91203F92210EF905000972DB /* MenuTableViewCell.swift */,
 				91203F82210EF531000972DB /* CommodityTableViewCell.swift */,
 			);
 			path = View;
@@ -196,12 +214,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91203F8B210EF89E000972DB /* SideMenuViewController.swift in Sources */,
 				91203F62210EF3B9000972DB /* AppDelegate.swift in Sources */,
 				91203F7B210EF4F2000972DB /* QueryService.swift in Sources */,
 				91203F81210EF529000972DB /* ShowGoodsViewController.swift in Sources */,
 				91203F7F210EF522000972DB /* UIView+buttonCustomisation.swift in Sources */,
+				91203F8D210EF89E000972DB /* BaseViewController.swift in Sources */,
+				91203F90210EF8FC000972DB /* MenuCellType.swift in Sources */,
 				91203F85210EF5ED000972DB /* Constants.swift in Sources */,
+				91203F91210EF8FC000972DB /* User.swift in Sources */,
+				91203F93210EF905000972DB /* MenuTableViewCell.swift in Sources */,
 				91203F74210EF489000972DB /* Commodity.swift in Sources */,
+				91203F8C210EF89E000972DB /* ContainerViewController.swift in Sources */,
 				91203F83210EF531000972DB /* CommodityTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

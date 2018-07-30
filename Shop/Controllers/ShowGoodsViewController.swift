@@ -8,10 +8,11 @@
 
 import UIKit
 
-class ShowGoodsViewController: UIViewController {
+class ShowGoodsViewController: BaseViewController {
     
     //MARK: Properties
     let queryService = QueryService.shared
+    var query: String?
     var goods: [Commodity] = []
     
     @IBOutlet weak var goodsTableView: UITableView!
@@ -20,13 +21,14 @@ class ShowGoodsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        queryService.queryGoods(query: ServiceQueries.allGoods) { (goods) in
-            if let goods = goods {
-                self.goods = goods
-                self.goodsTableView.reloadData()
+        if let query = query {
+            queryService.queryGoods(query: query) { (goods) in
+                if let goods = goods {
+                    self.goods = goods
+                    self.goodsTableView.reloadData()
+                }
             }
         }
-        
     }
     
     @objc func addToCardButtonTapped(_ button: UIButton) {
