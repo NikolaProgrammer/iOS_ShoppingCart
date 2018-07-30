@@ -11,8 +11,9 @@ import Foundation
 struct User: Codable {
     var id: Int
     var name: String
+    var purchases: [Purchase]
     
     private enum CodingKeys : String, CodingKey {
-        case id = "id", name = "name"
+        case id = "id", name = "name", purchases = "bucket"
     }
 }

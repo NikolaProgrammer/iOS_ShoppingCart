@@ -8,6 +8,11 @@
 
 import Foundation
 
+fileprivate enum RequestType: String {
+    case put
+    case post
+}
+
 class QueryService {
     
     //MARK: Shared instance
@@ -58,9 +63,33 @@ class QueryService {
         dataTask.resume()
     }
 
-    
+    //MARK: PUT-Request
+    func putUser() {
+        do {
+            let JSONData = try JSONEncoder().encode(user)
+            let url = URL(string: "http://localhost:3000/users/\(user.id)")!
+            
+            let request = createRequest(type: .put, body: JSONData, url: url)
+            session.dataTask(with: request).resume()
+        } catch {
+            print("Cannot encode user in JSON: \(error)" + "\n" + "description: \(error.localizedDescription)")
+            return
+        }
+    }
     
     //MARK: Private Methods
+    private func createRequest(type: RequestType, body: Data, url: URL) -> URLRequest {
+        var request = URLRequest(url: url)
+        request.httpBody = body
+        request.httpMethod = type.rawValue.uppercased()
+        
+        var headers = request.allHTTPHeaderFields ?? [:]
+        headers["Content-Type"] = "application/json"
+        request.allHTTPHeaderFields = headers
+        
+        return request
+    }
+    
     private func updateUser(data: Data) {
         do {
             user = try JSONDecoder().decode([User].self, from: data).first
