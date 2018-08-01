@@ -1,0 +1,139 @@
+{
+  "goods": [
+    {
+      "id": 1,
+      "model": "iPhone 7 32GB",
+      "price": 1220,
+      "discount": 0.8,
+      "quantity": 20,
+      "image": "https://content2.onliner.by/catalog/device/main/f8d7fac0fe59ead77f5199454a6e8c4a.jpeg"
+    },
+    {
+      "id": 2,
+      "model": "Huawei P20 Lite ANE-LX1",
+      "price": 620,
+      "discount": 0,
+      "quantity": 20,
+      "image": "https://content2.onliner.by/catalog/device/main/bd576617dc3f59b9ef84226739b2fd0b.jpeg"
+    },
+    {
+      "id": 3,
+      "model": "iPhone X 64GB",
+      "price": 2225,
+      "discount": 0.8,
+      "quantity": 0,
+      "image": "https://content2.onliner.by/catalog/device/main/cfd479a458f3548a6de5278bcaf4fc02.jpeg"
+    },
+    {
+      "id": 4,
+      "model": "Samsung Galaxy S8",
+      "price": 1200,
+      "discount": 0,
+      "quantity": 20,
+      "image": "https://content2.onliner.by/catalog/device/main/95e7e0c08bdbd3b1d9ba04d2938ae0ad.jpeg"
+    },
+    {
+      "id": 5,
+      "model": "Nokia 6",
+      "price": 530,
+      "discount": 0.8,
+      "quantity": 20,
+      "image": "https://content2.onliner.by/catalog/device/main/e413ca955266bf75f0d1c7f66426b7fc.jpeg"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Nikola Mikola",
+      "bucket": [
+        {
+          "commodity": {
+            "discount": 0.8,
+            "id": 1,
+            "model": "iPhone 7 32GB",
+            "quantity": 20,
+            "price": 1220,
+            "image": "https://content2.onliner.by/catalog/device/main/f8d7fac0fe59ead77f5199454a6e8c4a.jpeg"
+          },
+          "quantity": 4
+        },
+        {
+          "commodity": {
+            "discount": 0,
+            "id": 4,
+            "model": "Samsung Galaxy S8",
+            "quantity": 20,
+            "price": 1200,
+            "image": "https://content2.onliner.by/catalog/device/main/95e7e0c08bdbd3b1d9ba04d2938ae0ad.jpeg"
+          },
+          "quantity": 1
+        },
+        {
+          "commodity": {
+            "discount": 0.8,
+            "id": 5,
+            "model": "Nokia 6",
+            "quantity": 20,
+            "price": 530,
+            "image": "https://content2.onliner.by/catalog/device/main/e413ca955266bf75f0d1c7f66426b7fc.jpeg"
+          },
+          "quantity": 1
+        },
+        {
+          "commodity": {
+            "discount": 0.8,
+            "id": 3,
+            "model": "iPhone X 64GB",
+            "quantity": 0,
+            "price": 2225,
+            "image": "https://content2.onliner.by/catalog/device/main/cfd479a458f3548a6de5278bcaf4fc02.jpeg"
+          },
+          "quantity": 1
+        }
+      ]
+    }
+  ],
+  "orders": [
+    {
+      "status": "Открыт",
+      "id": 1,
+      "purchases": [
+        {
+          "commodity": {
+            "discount": 0.8,
+            "id": 1,
+            "model": "iPhone 7 32GB",
+            "quantity": 20,
+            "price": 1220,
+            "image": "https://content2.onliner.by/catalog/device/main/f8d7fac0fe59ead77f5199454a6e8c4a.jpeg"
+          },
+          "quantity": 4
+        },
+        {
+          "commodity": {
+            "discount": 0,
+            "id": 4,
+            "model": "Samsung Galaxy S8",
+            "quantity": 20,
+            "price": 1200,
+            "image": "https://content2.onliner.by/catalog/device/main/95e7e0c08bdbd3b1d9ba04d2938ae0ad.jpeg"
+          },
+          "quantity": 1
+        },
+        {
+          "commodity": {
+            "discount": 0.8,
+            "id": 5,
+            "model": "Nokia 6",
+            "quantity": 20,
+            "price": 530,
+            "image": "https://content2.onliner.by/catalog/device/main/e413ca955266bf75f0d1c7f66426b7fc.jpeg"
+          },
+          "quantity": 1
+        }
+      ],
+      "userId": 1,
+      "date": 554392546.545687
+    }
+  ]
+}
