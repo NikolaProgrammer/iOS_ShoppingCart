@@ -8,25 +8,25 @@
 
 import UIKit
 
-class ShowGoodsViewController: UIViewController {
+class ShowGoodsViewController: BaseViewController {
     
-    //MARK: Properties
-    let queryService = QueryService.shared
+    //MARK: - Properties
+    let queryGoodsService = QueryGoodsService()
     var goods: [Commodity] = []
     
     @IBOutlet weak var goodsTableView: UITableView!
    
-    //MARK: View lyfecycle
+    //MARK:  - View lyfecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        queryService.queryGoods() { (goods) in
+        queryGoodsService.queryGoods() { (goods) in
+
             if let goods = goods {
                 self.goods = goods
                 self.goodsTableView.reloadData()
             }
         }
-        
     }
     
     @objc func addToCardButtonTapped(_ button: UIButton) {
@@ -34,6 +34,7 @@ class ShowGoodsViewController: UIViewController {
     }
 }
 
+// MARK: - UITableViewDataSource
 extension ShowGoodsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return goods.count

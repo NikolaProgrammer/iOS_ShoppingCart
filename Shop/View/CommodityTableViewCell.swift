@@ -10,7 +10,7 @@ import UIKit
 
 class CommodityTableViewCell: UITableViewCell {
 
-    //MARK: Properties
+    //MARK: - Properties
     var commodity: Commodity!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
@@ -25,6 +25,7 @@ class CommodityTableViewCell: UITableViewCell {
         purchaseButton.removeTarget(nil, action: nil, for: .allEvents)
     }
     
+
     //MARK: Methods
     func configureCell(with commodity: Commodity) {
         self.commodity = commodity

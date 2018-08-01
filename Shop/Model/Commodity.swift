@@ -17,10 +17,10 @@ struct Commodity: Codable, Equatable {
     var imageURLStr: String
 
     private enum CodingKeys : String, CodingKey {
-        case id = "id"
+        case id
         case name = "model"
-        case price = "price"
-        case discount = "discount"
+        case price
+        case discount
         case quantityInStorage = "quantity"
         case imageURLStr = "image"
     }
