@@ -10,7 +10,7 @@ import UIKit
 
 class SideMenuViewController: UIViewController {
     
-    //MARK: Properties
+    //MARK: - Properties
     private var queryUserService = QueryUserService.shared
     
     @IBOutlet weak var userNameLabel: UILabel!
@@ -21,7 +21,7 @@ class SideMenuViewController: UIViewController {
         }
     }
     
-    //MARK: View lifecycle
+    //MARK: - View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,6 +31,7 @@ class SideMenuViewController: UIViewController {
     }
 }
 
+// MARK: - UITableViewDataSource
 extension SideMenuViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return MenuCellType.allValues.count
@@ -47,6 +48,7 @@ extension SideMenuViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - UITableViewDelegate
 extension SideMenuViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! MenuTableViewCell

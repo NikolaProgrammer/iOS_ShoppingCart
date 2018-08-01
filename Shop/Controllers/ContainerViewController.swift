@@ -10,7 +10,7 @@ import UIKit
 
 class ContainerViewController: UIViewController {
 
-    //MARK: Properties
+    //MARK: - Properties
     private var isMenuShown = false
     var menuType: MenuCellType = .main {
         didSet {
@@ -45,7 +45,7 @@ class ContainerViewController: UIViewController {
         menuView.layer.insertSublayer(gradient, at: 0)
     }
     
-    //MARK: Methods
+    //MARK: - Methods
     func showController() {
         
         guard let navigationController = self.childViewControllers[0] as? UINavigationController else {

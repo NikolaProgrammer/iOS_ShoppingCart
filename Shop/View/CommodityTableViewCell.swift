@@ -10,7 +10,7 @@ import UIKit
 
 class CommodityTableViewCell: UITableViewCell {
 
-    //MARK: Properties
+    //MARK: - Properties
     var commodity: Commodity!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
@@ -22,7 +22,7 @@ class CommodityTableViewCell: UITableViewCell {
     @IBOutlet weak var commodityImageView: UIImageView!
     
     
-    //MARK: Methods
+    //MARK: - Methods
     func configureCell(withCommodity commodity: Commodity) {
         self.commodity = commodity
         

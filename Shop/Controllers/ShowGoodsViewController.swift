@@ -10,13 +10,13 @@ import UIKit
 
 class ShowGoodsViewController: BaseViewController {
     
-    //MARK: Properties
+    //MARK: - Properties
     let queryGoodsService = QueryGoodsService()
     var goods: [Commodity] = []
     
     @IBOutlet weak var goodsTableView: UITableView!
    
-    //MARK: View lyfecycle
+    //MARK:  - View lyfecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,6 +33,7 @@ class ShowGoodsViewController: BaseViewController {
     }
 }
 
+// MARK: - UITableViewDataSource
 extension ShowGoodsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return goods.count

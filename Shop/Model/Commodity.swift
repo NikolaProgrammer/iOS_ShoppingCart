@@ -21,7 +21,12 @@ struct Commodity: Codable, Equatable {
     }
     
     private enum CodingKeys : String, CodingKey {
-        case id = "id", name = "model", price = "price", discount = "discount", quantityInStorage = "quantity", imageURL = "image"
+        case id
+        case name = "model"
+        case price
+        case discount
+        case quantityInStorage = "quantity"
+        case imageURL = "image"
     }
 
 }

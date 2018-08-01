@@ -13,22 +13,22 @@ class QueryUserService {
     //MARK: Shared instance
     static let shared = QueryUserService()
     
-    //MARK: Properties
+    //MARK: - Properties
     var user: User!
     private let session = URLSession(configuration: .default)
     
-    //MARK: Private initializators
+    //MARK: - Private initializators
     private init() {}
     
-    //MARK: GET-Requests
+    //MARK: - GET-Requests
     func queryUser(completion: @escaping (User?) -> ()) {
         guard let url = URL(string: ServiceQueries.getUser) else { return }
         
-        let dataTask = session.dataTask(with: url) { (data, responce, error) in
+        let dataTask = session.dataTask(with: url) { data, responce, error in
             if let error = error {
                 print("error: \(error)" + "\n" + "description: \(error.localizedDescription)")
             } else if let data = data, let responce = responce as? HTTPURLResponse, responce.statusCode == 200 {
-                self.updateUser(data: data)
+                self.updateUser(from: data)
                 DispatchQueue.main.async {
                     completion(self.user)
                 }
@@ -37,8 +37,8 @@ class QueryUserService {
         dataTask.resume()
     }
     
-    //MARK: Private Methods
-    private func updateUser(data: Data) {
+    //MARK: - Private Methods
+    private func updateUser(from data: Data) {
         do {
             user = try JSONDecoder().decode([User].self, from: data).first
         } catch {
