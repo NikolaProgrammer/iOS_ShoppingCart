@@ -20,7 +20,7 @@ class ShowGoodsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        queryService.queryGoods(query: ServiceQueries.allGoods) { (goods) in
+        queryService.queryGoods() { (goods) in
             if let goods = goods {
                 self.goods = goods
                 self.goodsTableView.reloadData()
@@ -44,7 +44,7 @@ extension ShowGoodsViewController: UITableViewDataSource {
         let commodity = goods[indexPath.row]
 
         let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIndentifiers.commodityIdentidier) as! CommodityTableViewCell
-        cell.configureCell(withCommodity: commodity)
+        cell.configureCell(with: commodity)
         cell.purchaseButton.addTarget(self, action: #selector(addToCardButtonTapped(_:)), for: .touchUpInside)
         return cell
 

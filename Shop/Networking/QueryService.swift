@@ -22,9 +22,8 @@ class QueryService {
     private init() {}
     
     //MARK: GET-Requests
-    
-    func queryGoods(query: String, completion: @escaping ([Commodity]?) -> ()) {
-        guard let url = URL(string: query) else {
+    func queryGoods(completion: @escaping ([Commodity]?) -> ()) {
+        guard let url = URL(string: ServiceQueries.allGoods) else {
             return
         }
         
