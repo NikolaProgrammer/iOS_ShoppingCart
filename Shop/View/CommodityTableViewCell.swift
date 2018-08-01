@@ -31,10 +31,8 @@ class CommodityTableViewCell: UITableViewCell {
         
         nameLabel.text = commodity.name
         priceLabel.text = "\(commodity.priceWithDiscount) руб."
-        
-        UIImageView().downloadImage(from: commodity.imageURLStr) { (imageView) in
-            self.commodityImageView.image = imageView.image
-        }
+        commodityImageView.setImage(from: commodity.imageURLStr)
+      
     }
 
 }

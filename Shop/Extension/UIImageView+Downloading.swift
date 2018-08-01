@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIImageView {
-    func downloadImage(from urlStr: String, completion: @escaping (UIImageView) -> () ) {
+    func setImage(from urlStr: String) {
         guard let url = URL(string: urlStr) else { return }
         
         DispatchQueue.global(qos: .userInitiated).async {
@@ -21,10 +21,6 @@ extension UIImageView {
             } catch {
                 print("cannot obtain image data: \(error)" + "\n" + "\(error.localizedDescription)")
             }
-            DispatchQueue.main.async {
-                completion(self)
-            }
         }
-        
     }
 }
