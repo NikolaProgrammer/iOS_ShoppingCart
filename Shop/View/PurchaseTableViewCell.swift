@@ -10,7 +10,7 @@ import UIKit
 
 class PurchaseTableViewCell: UITableViewCell {
 
-    //MARK: Properties
+    //MARK: - Properties
     @IBOutlet weak var commodityImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var priceWithDiscountLabel: UILabel!
@@ -20,11 +20,11 @@ class PurchaseTableViewCell: UITableViewCell {
     @IBOutlet weak var arrowImageView: UIImageView!
     
     
-    //MARK: Methods
+    //MARK: - Methods
     func configureCell(withPurchase purchase: Purchase) {
         
         titleLabel.text = purchase.commodity.name
-        obtainCommodityImage(fromUrl: purchase.commodity.imageURL)
+        commodityImageView.setImage(from: purchase.commodity.imageURLStr)
         
         if purchase.commodity.quantityInStorage <= 0 {
             backgroundImageView.image = UIImage(named: "cell_background_removed")
@@ -53,7 +53,7 @@ class PurchaseTableViewCell: UITableViewCell {
 
     }
     
-    //MARK: Private Methods
+    //MARK: - Private Methods
     private func obtainCommodityImage(fromUrl urlStr: String) {
         guard let url = URL(string: urlStr) else { return }
         do {

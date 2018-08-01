@@ -1,5 +1,5 @@
 //
-//  UIView+buttonCustomisation.swift
+//  UIButton+Customisation.swift
 //  ShoppingCart
 //
 //  Created by Nikolay Sereda on 27.07.2018.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-extension UIView {
+extension UIButton {
     
-    func customiseButton() {
+    func customise() {
         layer.cornerRadius = 8
         layer.borderWidth = 1
         layer.borderColor = #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1)

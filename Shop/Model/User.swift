@@ -14,6 +14,8 @@ struct User: Codable {
     var purchases: [Purchase]
     
     private enum CodingKeys : String, CodingKey {
-        case id = "id", name = "name", purchases = "bucket"
+        case id
+        case name
+        case purchases = "bucket"
     }
 }

@@ -13,8 +13,7 @@
 		91203F6C210EF3BC000972DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91203F6A210EF3BC000972DB /* LaunchScreen.storyboard */; };
 		91203F74210EF489000972DB /* Commodity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91203F73210EF489000972DB /* Commodity.swift */; };
 		91203F76210EF497000972DB /* db.json in Resources */ = {isa = PBXBuildFile; fileRef = 91203F75210EF497000972DB /* db.json */; };
-		91203F7B210EF4F2000972DB /* QueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91203F7A210EF4F2000972DB /* QueryService.swift */; };
-		91203F7F210EF522000972DB /* UIView+buttonCustomisation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91203F7E210EF522000972DB /* UIView+buttonCustomisation.swift */; };
+		91203F7B210EF4F2000972DB /* QueryGoodsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91203F7A210EF4F2000972DB /* QueryGoodsService.swift */; };
 		91203F81210EF529000972DB /* ShowGoodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91203F80210EF529000972DB /* ShowGoodsViewController.swift */; };
 		91203F83210EF531000972DB /* CommodityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91203F82210EF531000972DB /* CommodityTableViewCell.swift */; };
 		91203F85210EF5ED000972DB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91203F84210EF5ED000972DB /* Constants.swift */; };
@@ -28,6 +27,10 @@
 		91203F95210EFA58000972DB /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91203F94210EFA58000972DB /* Purchase.swift */; };
 		91203F97210EFAB6000972DB /* PurchaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91203F96210EFAB6000972DB /* PurchaseTableViewCell.swift */; };
 		91203F99210EFAF9000972DB /* ShowPurchasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91203F98210EFAF9000972DB /* ShowPurchasesViewController.swift */; };
+		9135F5772111B3D6008F69D5 /* UIImageView+Downloading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9135F5762111B3D6008F69D5 /* UIImageView+Downloading.swift */; };
+		9135F57B2111BF02008F69D5 /* QueryUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9135F57A2111BF02008F69D5 /* QueryUserService.swift */; };
+		9135F57E2111F18B008F69D5 /* UIImageView+Customization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9135F57D2111F18B008F69D5 /* UIImageView+Customization.swift */; };
+		91493CEB2111F81C0017412B /* UIButton+Customisation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91493CEA2111F81C0017412B /* UIButton+Customisation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +41,7 @@
 		91203F6B210EF3BC000972DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91203F73210EF489000972DB /* Commodity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commodity.swift; sourceTree = "<group>"; };
 		91203F75210EF497000972DB /* db.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = db.json; sourceTree = "<group>"; };
-		91203F7A210EF4F2000972DB /* QueryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryService.swift; sourceTree = "<group>"; };
-		91203F7E210EF522000972DB /* UIView+buttonCustomisation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+buttonCustomisation.swift"; sourceTree = "<group>"; };
+		91203F7A210EF4F2000972DB /* QueryGoodsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryGoodsService.swift; sourceTree = "<group>"; };
 		91203F80210EF529000972DB /* ShowGoodsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowGoodsViewController.swift; sourceTree = "<group>"; };
 		91203F82210EF531000972DB /* CommodityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommodityTableViewCell.swift; sourceTree = "<group>"; };
 		91203F84210EF5ED000972DB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -53,6 +55,10 @@
 		91203F94210EFA58000972DB /* Purchase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Purchase.swift; sourceTree = "<group>"; };
 		91203F96210EFAB6000972DB /* PurchaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseTableViewCell.swift; sourceTree = "<group>"; };
 		91203F98210EFAF9000972DB /* ShowPurchasesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowPurchasesViewController.swift; sourceTree = "<group>"; };
+		9135F5762111B3D6008F69D5 /* UIImageView+Downloading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Downloading.swift"; sourceTree = "<group>"; };
+		9135F57A2111BF02008F69D5 /* QueryUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryUserService.swift; sourceTree = "<group>"; };
+		9135F57D2111F18B008F69D5 /* UIImageView+Customization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Customization.swift"; sourceTree = "<group>"; };
+		91493CEA2111F81C0017412B /* UIButton+Customisation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Customisation.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +133,8 @@
 		91203F79210EF4DE000972DB /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				91203F7A210EF4F2000972DB /* QueryService.swift */,
+				91203F7A210EF4F2000972DB /* QueryGoodsService.swift */,
+				9135F57A2111BF02008F69D5 /* QueryUserService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -145,7 +152,9 @@
 		91203F7D210EF518000972DB /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				91203F7E210EF522000972DB /* UIView+buttonCustomisation.swift */,
+				91493CEA2111F81C0017412B /* UIButton+Customisation.swift */,
+				9135F57D2111F18B008F69D5 /* UIImageView+Customization.swift */,
+				9135F5762111B3D6008F69D5 /* UIImageView+Downloading.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -225,20 +234,23 @@
 			files = (
 				91203F8B210EF89E000972DB /* SideMenuViewController.swift in Sources */,
 				91203F62210EF3B9000972DB /* AppDelegate.swift in Sources */,
-				91203F7B210EF4F2000972DB /* QueryService.swift in Sources */,
+				91203F7B210EF4F2000972DB /* QueryGoodsService.swift in Sources */,
+				9135F57E2111F18B008F69D5 /* UIImageView+Customization.swift in Sources */,
 				91203F81210EF529000972DB /* ShowGoodsViewController.swift in Sources */,
 				91203F97210EFAB6000972DB /* PurchaseTableViewCell.swift in Sources */,
 				91203F99210EFAF9000972DB /* ShowPurchasesViewController.swift in Sources */,
-				91203F7F210EF522000972DB /* UIView+buttonCustomisation.swift in Sources */,
 				91203F8D210EF89E000972DB /* BaseViewController.swift in Sources */,
 				91203F95210EFA58000972DB /* Purchase.swift in Sources */,
 				91203F90210EF8FC000972DB /* MenuCellType.swift in Sources */,
 				91203F85210EF5ED000972DB /* Constants.swift in Sources */,
+				9135F57B2111BF02008F69D5 /* QueryUserService.swift in Sources */,
 				91203F91210EF8FC000972DB /* User.swift in Sources */,
 				91203F93210EF905000972DB /* MenuTableViewCell.swift in Sources */,
 				91203F74210EF489000972DB /* Commodity.swift in Sources */,
 				91203F8C210EF89E000972DB /* ContainerViewController.swift in Sources */,
+				9135F5772111B3D6008F69D5 /* UIImageView+Downloading.swift in Sources */,
 				91203F83210EF531000972DB /* CommodityTableViewCell.swift in Sources */,
+				91493CEB2111F81C0017412B /* UIButton+Customisation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,13 +10,13 @@ import UIKit
 
 class MenuTableViewCell: UITableViewCell {
     
-    //MAR: Properties
+    //MAR: - Properties
     var type: MenuCellType?
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     
-    //MARK: Methods
-    func configureCell(withType type: MenuCellType) {
+    //MARK: - Methods
+    func configureCell(with type: MenuCellType) {
         self.type = type
         nameLabel.text = type.name
         iconImageView.image = UIImage(named: type.rawValue)

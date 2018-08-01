@@ -10,36 +10,30 @@ import UIKit
 
 class CommodityTableViewCell: UITableViewCell {
 
-    //MARK: Properties
+    //MARK: - Properties
     var commodity: Commodity!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var purchaseButton: UIButton! {
         didSet {
-            purchaseButton.customiseButton()
+            purchaseButton.customise()
         }
     }
     @IBOutlet weak var commodityImageView: UIImageView!
     
+    override func prepareForReuse() {
+        purchaseButton.removeTarget(nil, action: nil, for: .allEvents)
+    }
     
-    //MARK: Methods
-    func configureCell(withCommodity commodity: Commodity) {
+
+    //MARK: - Methods
+    func configureCell(with commodity: Commodity) {
         self.commodity = commodity
         
         nameLabel.text = commodity.name
         priceLabel.text = "\(commodity.priceWithDiscount) руб."
-        obtainCommodityImage(fromUrl: commodity.imageURL)
+        commodityImageView.setImage(from: commodity.imageURLStr)
+      
     }
-    
-    //MARK: Private Methods
-    private func obtainCommodityImage(fromUrl urlStr: String) {
-        guard let url = URL(string: urlStr) else { return }
-        do {
-            let imageData = try Data(contentsOf: url)
-            commodityImageView.image = UIImage(data: imageData)
-        } catch {
-            print("cannot obtain image data: \(error)" + "\n" + "\(error.localizedDescription)")
-            commodityImageView.image = UIImage()
-        }
-    }
+
 }

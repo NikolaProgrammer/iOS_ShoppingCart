@@ -10,12 +10,11 @@ import UIKit
 
 class ShowPurchasesViewController: BaseViewController {
     
-    //MARK: Properties
-    let queryService = QueryService.shared
+    //MARK: - Properties
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var chekoutView: UIButton! {
         didSet {
-            chekoutView.customiseButton()
+            chekoutView.customise()
         }
     }
     
@@ -27,6 +26,7 @@ class ShowPurchasesViewController: BaseViewController {
     
 }
 
+// MARK: - UITableViewDataSource
 extension ShowPurchasesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return purchases.count
