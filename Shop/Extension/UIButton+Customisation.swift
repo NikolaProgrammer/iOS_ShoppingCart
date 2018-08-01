@@ -1,5 +1,5 @@
 //
-//  UIView+buttonCustomisation.swift
+//  UIButton+Customisation.swift
 //  ShoppingCart
 //
 //  Created by Nikolay Sereda on 27.07.2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIView {
+extension UIButton {
     
     func customiseButton() {
         layer.cornerRadius = 8

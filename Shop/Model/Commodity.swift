@@ -14,19 +14,21 @@ struct Commodity: Codable, Equatable {
     var price: Double
     var discount: Double
     var quantityInStorage: Int
-    var imageURL: String
-    
-    var priceWithDiscount: Double {
-        return (discount <= 0.0) ? price : price * (1 - discount)
-    }
-    
+    var imageURLStr: String
+
     private enum CodingKeys : String, CodingKey {
         case id
         case name = "model"
         case price
         case discount
         case quantityInStorage = "quantity"
-        case imageURL = "image"
+        case imageURLStr = "image"
     }
 
+}
+
+extension Commodity {
+    var priceWithDiscount: Double {
+        return (discount <= 0.0) ? price : price * (1 - discount)
+    }
 }

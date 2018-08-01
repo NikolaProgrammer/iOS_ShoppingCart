@@ -14,6 +14,7 @@ class QueryGoodsService {
     private let session = URLSession(configuration: .default)
     private var goods: [Commodity] = []
     
+
     //MARK: - GET-Requests
     func queryGoods(completion: @escaping ([Commodity]?) -> ()) {
         guard let url = URL(string: ServiceQueries.allGoods) else {
