@@ -16,7 +16,7 @@ class MenuTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     
     //MARK: Methods
-    func configureCell(withType type: MenuCellType) {
+    func configureCell(with type: MenuCellType) {
         self.type = type
         nameLabel.text = type.name
         iconImageView.image = UIImage(named: type.rawValue)

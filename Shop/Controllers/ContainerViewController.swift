@@ -55,7 +55,6 @@ class ContainerViewController: UIViewController {
         if menuType == .main {
             let controller = storyboard?.instantiateViewController(withIdentifier: StoryboardIndentifiers.goods) as! ShowGoodsViewController
             navigationController.setViewControllers([controller], animated: true)
-            controller.query = ServiceQueries.allGoods
         }
     }
     

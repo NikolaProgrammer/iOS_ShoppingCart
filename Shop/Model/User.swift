@@ -13,6 +13,7 @@ struct User: Codable {
     var name: String
     
     private enum CodingKeys : String, CodingKey {
-        case id = "id", name = "name"
+        case id = "id"
+        case name = "name"
     }
 }

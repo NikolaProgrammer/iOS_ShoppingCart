@@ -11,8 +11,7 @@ import UIKit
 class ShowGoodsViewController: BaseViewController {
     
     //MARK: Properties
-    let queryService = QueryService.shared
-    var query: String?
+    let queryGoodsService = QueryGoodsService()
     var goods: [Commodity] = []
     
     @IBOutlet weak var goodsTableView: UITableView!
@@ -21,12 +20,10 @@ class ShowGoodsViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let query = query {
-            queryService.queryGoods(query: query) { (goods) in
-                if let goods = goods {
-                    self.goods = goods
-                    self.goodsTableView.reloadData()
-                }
+        queryGoodsService.queryGoods() { (goods) in
+            if let goods = goods {
+                self.goods = goods
+                self.goodsTableView.reloadData()
             }
         }
     }
