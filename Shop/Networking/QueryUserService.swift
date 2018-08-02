@@ -19,7 +19,7 @@ class QueryUserService {
     static let shared = QueryUserService()
     
     //MARK: - Properties
-    var user: User!
+    var user = User(id: 0, name: "Guest", purchases: [])
     private let session = URLSession(configuration: .default)
     
     //MARK: - Private initializators
@@ -71,7 +71,7 @@ class QueryUserService {
     
     private func updateUser(from data: Data) {
         do {
-            user = try JSONDecoder().decode([User].self, from: data).first
+            user = (try JSONDecoder().decode([User].self, from: data).first)!
         } catch {
             fatalError("No such user")
         }

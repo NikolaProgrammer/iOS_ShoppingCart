@@ -12,9 +12,9 @@ class ShowPurchasesViewController: BaseViewController {
     
     //MARK: - Properties
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var chekoutView: UIButton! {
+    @IBOutlet weak var chekoutButton: UIButton! {
         didSet {
-            chekoutView.customise()
+            chekoutButton.customise()
         }
     }
     
@@ -27,7 +27,8 @@ class ShowPurchasesViewController: BaseViewController {
 }
 
 // MARK: - UITableViewDataSource
-extension ShowPurchasesViewController: UITableViewDataSource {
+extension ShowPurchasesViewController: UITableViewDataSource, UITableViewDelegate {
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return purchases.count
     }
