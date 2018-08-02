@@ -30,7 +30,22 @@ class ShowGoodsViewController: BaseViewController {
     }
     
     @objc func addToCardButtonTapped(_ button: UIButton) {
-
+        guard let cell = button.superview?.superview as? CommodityTableViewCell else { fatalError("No-No") }
+        
+        let queryUserService = QueryUserService.shared
+        
+        let index = queryUserService.user.purchases.index(where: { (purchase) -> Bool in
+            return purchase.commodity == cell.commodity
+        })
+        
+        if let index = index {
+            queryUserService.user.purchases[index].quantity += 1
+        } else {
+            let purchase = Purchase(commodity: cell.commodity, quantity: 1)
+            queryUserService.user.purchases.append(purchase)
+        }
+        
+        queryUserService.putUser()
     }
 }
 

@@ -16,7 +16,7 @@ class CommodityTableViewCell: UITableViewCell {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var purchaseButton: UIButton! {
         didSet {
-            purchaseButton.customiseButton()
+            purchaseButton.customise()
         }
     }
     @IBOutlet weak var commodityImageView: UIImageView!
@@ -26,7 +26,7 @@ class CommodityTableViewCell: UITableViewCell {
     }
     
 
-    //MARK: Methods
+    //MARK: - Methods
     func configureCell(with commodity: Commodity) {
         self.commodity = commodity
         

@@ -10,7 +10,7 @@ import UIKit
 
 extension UIButton {
     
-    func customiseButton() {
+    func customise() {
         layer.cornerRadius = 8
         layer.borderWidth = 1
         layer.borderColor = #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1)

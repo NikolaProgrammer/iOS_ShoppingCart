@@ -56,6 +56,11 @@ class ContainerViewController: UIViewController {
             let controller = storyboard?.instantiateViewController(withIdentifier: StoryboardIndentifiers.goods) as! ShowGoodsViewController
             navigationController.setViewControllers([controller], animated: true)
         }
+        if menuType == .bucket {
+            let controller = storyboard?.instantiateViewController(withIdentifier: StoryboardIndentifiers.carts) as! ShowPurchasesViewController
+            navigationController.setViewControllers([controller], animated: true)
+            controller.purchases = QueryUserService.shared.user.purchases
+        }
     }
     
     func toggleSideMenu() {

@@ -13,7 +13,7 @@ class BaseViewController: UIViewController {
     //MARK: - Properties
     var closeGestureRecogniser: UITapGestureRecognizer!
     
-    //MARK: View lyfecycle
+    //MARK: - View lyfecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
