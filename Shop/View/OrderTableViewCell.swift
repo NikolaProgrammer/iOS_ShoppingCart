@@ -10,14 +10,14 @@ import UIKit
 
 class OrderTableViewCell: UITableViewCell {
 
-    //MARK: Properties
+    //MARK: - Properties
     @IBOutlet weak var orderIdLabel: UILabel!
     @IBOutlet weak var orderDateLabel: UILabel!
     @IBOutlet weak var orderStatusLabel: UILabel!
     @IBOutlet weak var orderTotalCostLabel: UILabel!
     
-    //MARK: Methods
-    func configureCell(withOrder order: Order) {
+    //MARK: - Methods
+    func configureCell(with order: Order) {
         let price = order.purchases.reduce(0, { (result, purchase) -> Double in
             let price = (purchase.commodity.quantityInStorage <= 0) ? 0 : purchase.commodity.priceWithDiscount * Double(purchase.quantity)
             return result + price

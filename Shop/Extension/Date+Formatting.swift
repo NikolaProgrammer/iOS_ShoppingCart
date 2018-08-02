@@ -1,5 +1,5 @@
 //
-//  DateExtensoin.swift
+//  Date+Formatting.swift
 //  ShoppingCart
 //
 //  Created by Nikolay Sereda on 27.07.2018.

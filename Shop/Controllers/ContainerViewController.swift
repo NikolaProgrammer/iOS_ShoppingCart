@@ -10,7 +10,7 @@ import UIKit
 
 class ContainerViewController: UIViewController {
 
-    //MARK: Properties
+    //MARK: - Properties
     private var isMenuShown = false
     var menuType: MenuCellType = .main {
         didSet {
@@ -45,7 +45,7 @@ class ContainerViewController: UIViewController {
         menuView.layer.insertSublayer(gradient, at: 0)
     }
     
-    //MARK: Methods
+    //MARK: - Methods
     func showController() {
         
         guard let navigationController = self.childViewControllers[0] as? UINavigationController else {
@@ -55,12 +55,11 @@ class ContainerViewController: UIViewController {
         if menuType == .main {
             let controller = storyboard?.instantiateViewController(withIdentifier: StoryboardIndentifiers.goods) as! ShowGoodsViewController
             navigationController.setViewControllers([controller], animated: true)
-            controller.query = ServiceQueries.allGoods
         }
         if menuType == .purchases {
             let controller = storyboard?.instantiateViewController(withIdentifier: StoryboardIndentifiers.carts) as! ShowPurchasesViewController
             navigationController.setViewControllers([controller], animated: true)
-            controller.purchases = QueryService.shared.user.purchases
+            controller.purchases = QueryUserService.shared.user.purchases
         }
         if menuType == .orders {
             let controller = storyboard?.instantiateViewController(withIdentifier: StoryboardIndentifiers.orders) as! ShowOrdersViewController

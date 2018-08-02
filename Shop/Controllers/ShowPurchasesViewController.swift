@@ -10,31 +10,35 @@ import UIKit
 
 class ShowPurchasesViewController: BaseViewController {
     
-    //MARK: Properties
-    let queryService = QueryService.shared
+    //MARK: - Properties
+    
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var chekoutView: UIButton! {
+    @IBOutlet weak var chekoutButton: UIButton! {
         didSet {
-            chekoutView.customiseButton()
+            chekoutButton.customise()
         }
     }
     
     var purchases: [Purchase] = []
     
+    //MARK: - Actions
     @IBAction func checkoutButtonTapped(_ sender: UIButton) {
+        let queryOrderService = QueryOrderService()
+        
         var id = 0
-        queryService.queryOrders { (orders) in
+        queryOrderService.queryOrders { (orders) in
             id = orders!.count + 1
         }
         
-        let order = Order(id: id, userId: queryService.user.id, purchases: purchases, date: Date(), status: Order.OrderStatus.open)
-        queryService.addOrder(order: order)
+        let order = Order(id: id, userId: QueryUserService.shared.user.id, purchases: purchases, date: Date(), status: Order.OrderStatus.open)
+        queryOrderService.addOrder(order)
     }
     
 }
 
-extension ShowPurchasesViewController: UITableViewDataSource {
-    
+// MARK: - UITableViewDataSource
+extension ShowPurchasesViewController: UITableViewDataSource, UITableViewDelegate {
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return purchases.count
     }

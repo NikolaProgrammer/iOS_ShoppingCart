@@ -10,31 +10,28 @@ import UIKit
 
 class SideMenuViewController: UIViewController {
     
-    //MARK: Properties
-    private var queryService = QueryService.shared
+    //MARK: - Properties
+    private var queryUserService = QueryUserService.shared
     
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var avatarImageView: UIImageView! {
         didSet {
-            avatarImageView.layer.cornerRadius = avatarImageView.bounds.width / 2
-            avatarImageView.layer.borderWidth = 10
-            avatarImageView.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-            avatarImageView.layer.masksToBounds = false
-            avatarImageView.clipsToBounds = true
+            avatarImageView.roundCorners()
         }
     }
     
-    //MARK: View lifecycle
+    //MARK: - View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        queryService.queryUser { (user) in
+        queryUserService.queryUser { (user) in
             self.userNameLabel.text = user?.name
         }
     }
 }
 
+// MARK: - UITableViewDataSource
 extension SideMenuViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return MenuCellType.allValues.count
@@ -45,12 +42,13 @@ extension SideMenuViewController: UITableViewDataSource {
         
         let type = MenuCellType.allValues[indexPath.row]
         
-        cell.configureCell(withType: type)
+        cell.configureCell(with: type)
         
         return cell
     }
 }
 
+// MARK: - UITableViewDelegate
 extension SideMenuViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! MenuTableViewCell

@@ -10,22 +10,23 @@ import UIKit
 
 class ShowOrdersViewController: BaseViewController {
 
-    //MARK: Properties
-    let queryService = QueryService.shared
+    //MARK: - Properties
+    let queryOrderService = QueryOrderService()
     var orders: [Order] = []
     @IBOutlet weak var tableView: UITableView!
     
-    //MARK: View lyfecycle
+    //MARK: - View lyfecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        queryService.queryOrders { (orders) in
+        queryOrderService.queryOrders { (orders) in
             self.orders = orders!
             self.tableView.reloadData()
         }
     }  
 }
 
+//MARK: - UITableViewDataSource
 extension ShowOrdersViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -40,13 +41,14 @@ extension ShowOrdersViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIndentifiers.orderIdentifier) as! OrderTableViewCell
         let order = orders[indexPath.section]
         
-        cell.configureCell(withOrder: order)
+        cell.configureCell(with: order)
         
         return cell
     }
  
 }
 
+//MARK: - UITableViewDelegate
 extension ShowOrdersViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -63,7 +65,7 @@ extension ShowOrdersViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let order = orders.remove(at: indexPath.section)
-            queryService.deleteOrder(order: order)
+            queryOrderService.deleteOrder(order)
             tableView.deleteSections(IndexSet(arrayLiteral: indexPath.section), with: .automatic)
         }
     }
