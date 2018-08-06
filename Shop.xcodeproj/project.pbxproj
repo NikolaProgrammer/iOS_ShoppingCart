@@ -35,11 +35,20 @@
 		9135F57B2111BF02008F69D5 /* QueryUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9135F57A2111BF02008F69D5 /* QueryUserService.swift */; };
 		9135F57E2111F18B008F69D5 /* UIImageView+Customization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9135F57D2111F18B008F69D5 /* UIImageView+Customization.swift */; };
 		91493CEB2111F81C0017412B /* UIButton+Customisation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91493CEA2111F81C0017412B /* UIButton+Customisation.swift */; };
+		916711C72114538D00737CAE /* MapCommodity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916711C62114538D00737CAE /* MapCommodity.swift */; };
+		916711C92114539600737CAE /* AlamofireQueryGoodsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916711C82114539600737CAE /* AlamofireQueryGoodsService.swift */; };
+		916711CD2114541200737CAE /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 916711CA2114541200737CAE /* ObjectMapper.framework */; };
+		916711CE2114541200737CAE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 916711CB2114541200737CAE /* Alamofire.framework */; };
+		916711CF2114541200737CAE /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 916711CC2114541200737CAE /* AlamofireObjectMapper.framework */; };
+		916711D12114571700737CAE /* AlarmofireObjectMapperQueryGoodsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916711D02114571700737CAE /* AlarmofireObjectMapperQueryGoodsService.swift */; };
 		916D6D822112EF1E00ECFCC0 /* QueryOrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916D6D812112EF1E00ECFCC0 /* QueryOrderService.swift */; };
 		916D6D842112F12B00ECFCC0 /* QueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916D6D832112F12A00ECFCC0 /* QueryService.swift */; };
+		924C6E52832C75154AD5FCD1 /* Pods_Shop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5A9B1150FBB9CA4197EE93 /* Pods_Shop.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		028D1C4552096F7C6E7230AA /* Pods-Shop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shop/Pods-Shop.debug.xcconfig"; sourceTree = "<group>"; };
+		4A5A9B1150FBB9CA4197EE93 /* Pods_Shop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91203F5E210EF3B9000972DB /* Shop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91203F61210EF3B9000972DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91203F66210EF3B9000972DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -69,8 +78,15 @@
 		9135F57A2111BF02008F69D5 /* QueryUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryUserService.swift; sourceTree = "<group>"; };
 		9135F57D2111F18B008F69D5 /* UIImageView+Customization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Customization.swift"; sourceTree = "<group>"; };
 		91493CEA2111F81C0017412B /* UIButton+Customisation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Customisation.swift"; sourceTree = "<group>"; };
+		916711C62114538D00737CAE /* MapCommodity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapCommodity.swift; sourceTree = "<group>"; };
+		916711C82114539600737CAE /* AlamofireQueryGoodsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireQueryGoodsService.swift; sourceTree = "<group>"; };
+		916711CA2114541200737CAE /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
+		916711CB2114541200737CAE /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		916711CC2114541200737CAE /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
+		916711D02114571700737CAE /* AlarmofireObjectMapperQueryGoodsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmofireObjectMapperQueryGoodsService.swift; sourceTree = "<group>"; };
 		916D6D812112EF1E00ECFCC0 /* QueryOrderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryOrderService.swift; sourceTree = "<group>"; };
 		916D6D832112F12A00ECFCC0 /* QueryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryService.swift; sourceTree = "<group>"; };
+		CF93AE2C072EF4256BF9365C /* Pods-Shop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shop.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shop/Pods-Shop.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,18 +94,44 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				924C6E52832C75154AD5FCD1 /* Pods_Shop.framework in Frameworks */,
+				916711CD2114541200737CAE /* ObjectMapper.framework in Frameworks */,
+				916711CE2114541200737CAE /* Alamofire.framework in Frameworks */,
+				916711CF2114541200737CAE /* AlamofireObjectMapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3569A6D537AAA59DC6EBD954 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				916711CB2114541200737CAE /* Alamofire.framework */,
+				916711CC2114541200737CAE /* AlamofireObjectMapper.framework */,
+				916711CA2114541200737CAE /* ObjectMapper.framework */,
+				4A5A9B1150FBB9CA4197EE93 /* Pods_Shop.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3FCFE4A1D9A27A3C89FAD83F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				028D1C4552096F7C6E7230AA /* Pods-Shop.debug.xcconfig */,
+				CF93AE2C072EF4256BF9365C /* Pods-Shop.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		91203F55210EF3B9000972DB = {
 			isa = PBXGroup;
 			children = (
 				91203F60210EF3B9000972DB /* Shop */,
 				91203F5F210EF3B9000972DB /* Products */,
 				91203F75210EF497000972DB /* db.json */,
+				3FCFE4A1D9A27A3C89FAD83F /* Pods */,
+				3569A6D537AAA59DC6EBD954 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,6 +164,7 @@
 		91203F77210EF49D000972DB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				916711C62114538D00737CAE /* MapCommodity.swift */,
 				91203F94210EFA58000972DB /* Purchase.swift */,
 				91203F8E210EF8FC000972DB /* MenuCellType.swift */,
 				91203F9A210EFC97000972DB /* Order.swift */,
@@ -147,6 +190,8 @@
 		91203F79210EF4DE000972DB /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				916711C82114539600737CAE /* AlamofireQueryGoodsService.swift */,
+				916711D02114571700737CAE /* AlarmofireObjectMapperQueryGoodsService.swift */,
 				916D6D832112F12A00ECFCC0 /* QueryService.swift */,
 				91203F7A210EF4F2000972DB /* QueryGoodsService.swift */,
 				9135F57A2111BF02008F69D5 /* QueryUserService.swift */,
@@ -184,9 +229,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 91203F70210EF3BC000972DB /* Build configuration list for PBXNativeTarget "Shop" */;
 			buildPhases = (
+				2D5C1346DF4A6597F8F2A2D0 /* [CP] Check Pods Manifest.lock */,
 				91203F5A210EF3B9000972DB /* Sources */,
 				91203F5B210EF3B9000972DB /* Frameworks */,
 				91203F5C210EF3B9000972DB /* Resources */,
+				C2A97AD1B866847C7C46C475 /* [CP] Embed Pods Frameworks */,
+				916711D22114590C00737CAE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -245,6 +293,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2D5C1346DF4A6597F8F2A2D0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Shop-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		916711D22114590C00737CAE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireObjectMapper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		C2A97AD1B866847C7C46C475 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Shop/Pods-Shop-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shop/Pods-Shop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		91203F5A210EF3B9000972DB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -254,12 +359,15 @@
 				91203F62210EF3B9000972DB /* AppDelegate.swift in Sources */,
 				91203F7B210EF4F2000972DB /* QueryGoodsService.swift in Sources */,
 				9135F57E2111F18B008F69D5 /* UIImageView+Customization.swift in Sources */,
+				916711C92114539600737CAE /* AlamofireQueryGoodsService.swift in Sources */,
 				91203F81210EF529000972DB /* ShowGoodsViewController.swift in Sources */,
 				91203F97210EFAB6000972DB /* PurchaseTableViewCell.swift in Sources */,
 				91203F99210EFAF9000972DB /* ShowPurchasesViewController.swift in Sources */,
 				916D6D842112F12B00ECFCC0 /* QueryService.swift in Sources */,
+				916711D12114571700737CAE /* AlarmofireObjectMapperQueryGoodsService.swift in Sources */,
 				91203F9D210EFC9E000972DB /* OrderTableViewCell.swift in Sources */,
 				91203F9B210EFC97000972DB /* Order.swift in Sources */,
+				916711C72114538D00737CAE /* MapCommodity.swift in Sources */,
 				91203FA1210EFD94000972DB /* Date+Formatting.swift in Sources */,
 				91203F8D210EF89E000972DB /* BaseViewController.swift in Sources */,
 				91203F95210EFA58000972DB /* Purchase.swift in Sources */,
@@ -416,9 +524,14 @@
 		};
 		91203F71210EF3BC000972DB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 028D1C4552096F7C6E7230AA /* Pods-Shop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Shop/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -433,9 +546,14 @@
 		};
 		91203F72210EF3BC000972DB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF93AE2C072EF4256BF9365C /* Pods-Shop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Shop/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

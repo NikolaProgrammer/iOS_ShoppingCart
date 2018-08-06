@@ -25,9 +25,10 @@ class SideMenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        queryUserService.queryUser { (user) in
-            self.userNameLabel.text = user?.name
+        queryUserService.updateUser {
+            self.userNameLabel.text = self.queryUserService.user.name
         }
+       
     }
 }
 

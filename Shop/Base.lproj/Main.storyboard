@@ -122,7 +122,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Товары" id="QGo-23-tLH"/>
                     <connections>
-                        <outlet property="goodsTableView" destination="uED-vi-mvn" id="c1y-yS-Xuv"/>
+                        <outlet property="tableView" destination="uED-vi-mvn" id="YaN-ZM-1w9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qsX-GN-lr6" sceneMemberID="firstResponder"/>
@@ -218,9 +218,7 @@
                                 <rect key="frame" x="0.0" y="278" width="250" height="422"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="menu" rowHeight="54" id="OU6-TT-dif" customClass="MenuTableViewCell" customModule="Shop" customModuleProvider="target">
-
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="menu" rowHeight="54" id="OU6-TT-dif" customClass="MenuTableViewCell" customModule="Shop" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="250" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OU6-TT-dif" id="zf2-29-G8d">
@@ -299,10 +297,8 @@
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" red="0.45098039220000002" green="0.64313725489999995" blue="0.87450980389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="purchase" rowHeight="152" id="d5V-68-tVr" customClass="PurchaseTableViewCell" customModule="Shop" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="152"/>
-
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="d5V-68-tVr" id="Zxr-UV-UDG">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="152"/>

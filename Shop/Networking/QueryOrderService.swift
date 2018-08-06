@@ -10,26 +10,7 @@ import Foundation
 
 class QueryOrderService: QueryService {
     //MARK: - Properties
-    private let session = URLSession(configuration: .default)
-    
-    private var orders: [Order] = []
-    
-    //MARK: - GET-Requests
-    func queryOrders(completion: @escaping ([Order]?) -> ()) {
-        guard let url = URL(string: ServiceQueries.userOrders) else { return }
-        
-        let dataTask = session.dataTask(with: url){ (data, responce, error) in
-            if let error = error {
-                print("error: \(error)" + "\n" + "description: \(error.localizedDescription)")
-            } else if let data = data, let responce = responce as? HTTPURLResponse, responce.statusCode == 200 {
-                self.updateOrders(with: data)
-                DispatchQueue.main.async {
-                    completion(self.orders)
-                }
-            }
-        }
-        dataTask.resume()
-    }
+    var orders: [Order] = []
     
     //MARK: - POST-Request
     func addOrder(_ order: Order) {
@@ -59,14 +40,12 @@ class QueryOrderService: QueryService {
         }
     }
     
-    //MARK: - Private Methods
-    
-    private func updateOrders(with data: Data) {
-        do {
-            orders = try JSONDecoder().decode([Order].self, from: data)
-        } catch {
-            print("decoding error: \(error)" + "\n" + "description: \(error.localizedDescription)")
-            orders = []
+    //MARK: - Methods
+    func updateOrders(completion: @escaping () -> ()) {
+        guard let url = URL(string: ServiceQueries.userOrders) else { return }
+        updateEntity(from: url) { (orders: [Order]) in
+            self.orders = orders
+            completion()
         }
     }
 }
