@@ -27,6 +27,7 @@ class PurchaseTableViewCell: UITableViewCell {
         commodityImageView.setImage(from: purchase.commodity.imageURLStr)
         
         if purchase.commodity.quantityInStorage <= 0 {
+            
             backgroundImageView.image = UIImage(named: "cell_background_removed")
             let transform = CGAffineTransform(rotationAngle: CGFloat.pi / 90)
             priceLabel.isHidden = true
@@ -38,6 +39,7 @@ class PurchaseTableViewCell: UITableViewCell {
             priceWithDiscountLabel.text = "Отсутствует на складе"
             
         } else {
+            
             priceWithDiscountLabel.text = "\(purchase.commodity.priceWithDiscount) руб."
             quantityLabel.text = "кол: \(purchase.quantity)"
        

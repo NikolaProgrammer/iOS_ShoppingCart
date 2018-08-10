@@ -11,6 +11,7 @@ import UIKit
 class ShowPurchasesViewController: BaseViewController {
     
     //MARK: - Properties
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var chekoutButton: UIButton! {
         didSet {
@@ -20,8 +21,16 @@ class ShowPurchasesViewController: BaseViewController {
     
     var purchases: [Purchase] = []
     
+    //MARK: - Actions
     @IBAction func checkoutButtonTapped(_ sender: UIButton) {
-     
+        let queryOrderService = QueryOrderService()
+        
+        queryOrderService.updateOrders {
+            let id = queryOrderService.orders.count + 1
+            
+            let order = Order(id: id, userId: QueryUserService.shared.user.id, purchases: self.purchases, date: Date(), status: Order.OrderStatus.open)
+            queryOrderService.addOrder(order)
+        }
     }
     
 }
